@@ -12,27 +12,15 @@ ____
 systemctl restart httpd.service
 ----
 
-Job for httpd.service failed because the control process exited with
-error code. See "`systemctl status httpd.service`" and "`journalctl -xeu
-httpd.service`" for details.
-
-....
-
-The Apache service fails to restart.  You can see a more specific error
-message in the SSL error log for Apache.  You will further diagnose this
+The Apache service fails to restart. You can see a more specific error
+message in the SSL error log for Apache. You will further diagnose this
 using the error messages from the command below and reconcile this in
 additional steps in the exercise.
 
-```bash
+[source,bash]
+----
 tail -2 /var/log/httpd/ssl_error_log
-....
-
-[Tue Jul 16 15:13:25.580860 2019 ] [ssl:emerg] [pid 8869:tid
-140233336588544] AH02562: Failed to configure certificate
-fe80::42:acff:fe11:b:443:0 (with chain), check
-/etc/pki/tls/certs/localhost.crt [Tue Jul 16 15:13:25.580860 2019 ]
-[ssl:emerg] [pid 8869:tid 140233336588544] SSL Library Error: error:
-140AB18F: SSL routines: SSL_CTX_use_certificate:ee key too small ```
+----
 
 ____
 *NOTE:* Your log date, time, process ID, or other metadata may be

@@ -32,8 +32,6 @@ Verify the bit-length of the key to confirm that it is 3072 bit.
 openssl x509 -in /etc/pki/tls/certs/localhost.crt -text | grep bit
 ----
 
-RSA Public-Key: (3072 bit) ```
-
 Now that a new SSL certificate has been created using a larger public
 key, it complies with the requirements of the FUTURE cryptographic
 policy.
